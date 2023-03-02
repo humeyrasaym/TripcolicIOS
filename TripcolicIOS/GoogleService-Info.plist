@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>952850215920-6cbjicpa726c2g51rd7t0t6qk2d6mcsd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.952850215920-6cbjicpa726c2g51rd7t0t6qk2d6mcsd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDtt57ySFX40WXbdFl-93oaVVpB-UQy1kI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>952850215920</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.humeyrasaym.TripcolicIOS</string>
+	<key>PROJECT_ID</key>
+	<string>tripcolicios</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tripcolicios.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:952850215920:ios:2c570ac2224ad1fa952335</string>
+</dict>
+</plist>
