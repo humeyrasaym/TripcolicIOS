@@ -15,7 +15,6 @@ class ViewController: UIViewController{
 
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var usernameText: UITextField!
-    
     @IBOutlet weak var rememberMe: UIButton!
     
     override func viewDidLoad() {

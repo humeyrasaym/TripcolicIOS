@@ -11,6 +11,7 @@
 		3342EC64299CFE2F00F36131 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342EC63299CFE2F00F36131 /* FeedViewController.swift */; };
 		3342EC66299CFE9D00F36131 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342EC65299CFE9D00F36131 /* MapViewController.swift */; };
 		3342EC68299CFEDD00F36131 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342EC67299CFEDD00F36131 /* ProfileViewController.swift */; };
+		334DF8692A0904F400A089B9 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334DF8682A0904F400A089B9 /* UploadViewController.swift */; };
 		335C613E296594900032BF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C613D296594900032BF71 /* AppDelegate.swift */; };
 		335C6140296594900032BF71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C613F296594900032BF71 /* SceneDelegate.swift */; };
 		335C6142296594900032BF71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C6141296594900032BF71 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 		3342EC63299CFE2F00F36131 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		3342EC65299CFE9D00F36131 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3342EC67299CFEDD00F36131 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		334DF8682A0904F400A089B9 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		335C613A296594900032BF71 /* TripcolicIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripcolicIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		335C613D296594900032BF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		335C613F296594900032BF71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,11 +110,20 @@
 		3342EC69299CFEF000F36131 /* TabBars */ = {
 			isa = PBXGroup;
 			children = (
+				334DF8672A0904E000A089B9 /* Upload */,
 				330A02A129B644B100E4F9D4 /* Profile */,
 				330A02A029B644A700E4F9D4 /* Map */,
 				330A029F29B6449900E4F9D4 /* Feed */,
 			);
 			path = TabBars;
+			sourceTree = "<group>";
+		};
+		334DF8672A0904E000A089B9 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				334DF8682A0904F400A089B9 /* UploadViewController.swift */,
+			);
+			path = Upload;
 			sourceTree = "<group>";
 		};
 		335C6131296594900032BF71 = {
@@ -341,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				334DF8692A0904F400A089B9 /* UploadViewController.swift in Sources */,
 				335C6142296594900032BF71 /* ViewController.swift in Sources */,
 				333ED80929E82AAD00826B52 /* CLLocation+Extensions.swift in Sources */,
 				335C613E296594900032BF71 /* AppDelegate.swift in Sources */,
