@@ -39,11 +39,15 @@ class ViewController: UIViewController{
         passwordText.layer.masksToBounds = true
         passwordText.layer.borderColor = UIColor.gray.cgColor
         passwordText.layer.borderWidth = 2
+        passwordText.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+        passwordText.leftViewMode = .always
         
         usernameText.layer.cornerRadius = 18
         usernameText.layer.masksToBounds = true
         usernameText.layer.borderColor = UIColor.gray.cgColor
         usernameText.layer.borderWidth = 2
+        usernameText.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+        usernameText.leftViewMode = .always
     }
     
     // MARK: - IBActions

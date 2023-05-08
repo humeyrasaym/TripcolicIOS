@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		333ED80929E82AAD00826B52 /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333ED80829E82AAD00826B52 /* CLLocation+Extensions.swift */; };
 		3342EC64299CFE2F00F36131 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342EC63299CFE2F00F36131 /* FeedViewController.swift */; };
 		3342EC66299CFE9D00F36131 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342EC65299CFE9D00F36131 /* MapViewController.swift */; };
 		3342EC68299CFEDD00F36131 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342EC67299CFEDD00F36131 /* ProfileViewController.swift */; };
@@ -17,12 +18,16 @@
 		335C614A296594910032BF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 335C6148296594910032BF71 /* LaunchScreen.storyboard */; };
 		335C61522965A70F0032BF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 335C61512965A70F0032BF71 /* Assets.xcassets */; };
 		335C615B2965BCEF0032BF71 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C615A2965BCEF0032BF71 /* RegisterViewController.swift */; };
+		3361E71C29D859CC008E17B4 /* PlacesTabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3361E71B29D859CC008E17B4 /* PlacesTabelViewController.swift */; };
+		339FAF9929D59D1900BDAE59 /* PopUpMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339FAF9829D59D1900BDAE59 /* PopUpMapViewController.swift */; };
 		33AC4FB2297AC64C00F61B4D /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AC4FB1297AC64C00F61B4D /* FirebaseManager.swift */; };
 		33AC4FB4297D3B1700F61B4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33AC4FB3297D3B1700F61B4D /* GoogleService-Info.plist */; };
+		33D8471729D83903008F84E0 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D8471629D83903008F84E0 /* PlaceAnnotation.swift */; };
 		5862A5BA664E936C0B833254 /* Pods_TripcolicIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EB616328B2AF0D29D38F3A /* Pods_TripcolicIOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		333ED80829E82AAD00826B52 /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
 		3342EC63299CFE2F00F36131 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		3342EC65299CFE9D00F36131 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3342EC67299CFEDD00F36131 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -35,8 +40,11 @@
 		335C614B296594910032BF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		335C61512965A70F0032BF71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		335C615A2965BCEF0032BF71 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3361E71B29D859CC008E17B4 /* PlacesTabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTabelViewController.swift; sourceTree = "<group>"; };
+		339FAF9829D59D1900BDAE59 /* PopUpMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpMapViewController.swift; sourceTree = "<group>"; };
 		33AC4FB1297AC64C00F61B4D /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		33AC4FB3297D3B1700F61B4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		33D8471629D83903008F84E0 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		5959ED918D90BB8663F05A6C /* Pods-TripcolicIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripcolicIOS.debug.xcconfig"; path = "Target Support Files/Pods-TripcolicIOS/Pods-TripcolicIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		68EB616328B2AF0D29D38F3A /* Pods_TripcolicIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripcolicIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE36BE87335121BE5CB43B22 /* Pods-TripcolicIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripcolicIOS.release.xcconfig"; path = "Target Support Files/Pods-TripcolicIOS/Pods-TripcolicIOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,12 +71,46 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		3342EC69299CFEF000F36131 /* TabBars */ = {
+		330A029F29B6449900E4F9D4 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
 				3342EC63299CFE2F00F36131 /* FeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		330A02A029B644A700E4F9D4 /* Map */ = {
+			isa = PBXGroup;
+			children = (
 				3342EC65299CFE9D00F36131 /* MapViewController.swift */,
+				339FAF9829D59D1900BDAE59 /* PopUpMapViewController.swift */,
+				3361E71B29D859CC008E17B4 /* PlacesTabelViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		330A02A129B644B100E4F9D4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
 				3342EC67299CFEDD00F36131 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		333ED80529E829FF00826B52 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				333ED80829E82AAD00826B52 /* CLLocation+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3342EC69299CFEF000F36131 /* TabBars */ = {
+			isa = PBXGroup;
+			children = (
+				330A02A129B644B100E4F9D4 /* Profile */,
+				330A02A029B644A700E4F9D4 /* Map */,
+				330A029F29B6449900E4F9D4 /* Feed */,
 			);
 			path = TabBars;
 			sourceTree = "<group>";
@@ -96,6 +138,8 @@
 			children = (
 				33AC4FB0297AC63A00F61B4D /* Utilities */,
 				335C61552965BC5F0032BF71 /* Components */,
+				333ED80529E829FF00826B52 /* Extensions */,
+				33D8471329D8360B008F84E0 /* Annotations */,
 				335C61542965BC570032BF71 /* Controllers */,
 				335C61532965BC500032BF71 /* Models */,
 				335C613D296594900032BF71 /* AppDelegate.swift */,
@@ -163,6 +207,14 @@
 				33AC4FB1297AC64C00F61B4D /* FirebaseManager.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		33D8471329D8360B008F84E0 /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				33D8471629D83903008F84E0 /* PlaceAnnotation.swift */,
+			);
+			path = Annotations;
 			sourceTree = "<group>";
 		};
 		580DD179E165394342B308AA /* Frameworks */ = {
@@ -290,13 +342,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				335C6142296594900032BF71 /* ViewController.swift in Sources */,
+				333ED80929E82AAD00826B52 /* CLLocation+Extensions.swift in Sources */,
 				335C613E296594900032BF71 /* AppDelegate.swift in Sources */,
+				33D8471729D83903008F84E0 /* PlaceAnnotation.swift in Sources */,
+				3361E71C29D859CC008E17B4 /* PlacesTabelViewController.swift in Sources */,
 				33AC4FB2297AC64C00F61B4D /* FirebaseManager.swift in Sources */,
 				335C6140296594900032BF71 /* SceneDelegate.swift in Sources */,
 				3342EC64299CFE2F00F36131 /* FeedViewController.swift in Sources */,
 				335C615B2965BCEF0032BF71 /* RegisterViewController.swift in Sources */,
 				3342EC68299CFEDD00F36131 /* ProfileViewController.swift in Sources */,
 				3342EC66299CFE9D00F36131 /* MapViewController.swift in Sources */,
+				339FAF9929D59D1900BDAE59 /* PopUpMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +503,8 @@
 				DEVELOPMENT_TEAM = K89SKHBN94;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TripcolicIOS/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "to take your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "to take your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -476,6 +534,8 @@
 				DEVELOPMENT_TEAM = K89SKHBN94;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TripcolicIOS/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "to take your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "to take your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
