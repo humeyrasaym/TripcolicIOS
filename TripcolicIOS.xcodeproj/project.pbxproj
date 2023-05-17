@@ -23,6 +23,8 @@
 		339FAF9929D59D1900BDAE59 /* PopUpMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339FAF9829D59D1900BDAE59 /* PopUpMapViewController.swift */; };
 		33AC4FB2297AC64C00F61B4D /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AC4FB1297AC64C00F61B4D /* FirebaseManager.swift */; };
 		33AC4FB4297D3B1700F61B4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33AC4FB3297D3B1700F61B4D /* GoogleService-Info.plist */; };
+		33C24BA42A150DA6002CA459 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C24BA32A150DA6002CA459 /* PlaceDetailViewController.swift */; };
+		33C24BA62A152E55002CA459 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C24BA52A152E55002CA459 /* String+Extensions.swift */; };
 		33D8471729D83903008F84E0 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D8471629D83903008F84E0 /* PlaceAnnotation.swift */; };
 		5862A5BA664E936C0B833254 /* Pods_TripcolicIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EB616328B2AF0D29D38F3A /* Pods_TripcolicIOS.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,8 @@
 		339FAF9829D59D1900BDAE59 /* PopUpMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpMapViewController.swift; sourceTree = "<group>"; };
 		33AC4FB1297AC64C00F61B4D /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		33AC4FB3297D3B1700F61B4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		33C24BA32A150DA6002CA459 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+		33C24BA52A152E55002CA459 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		33D8471629D83903008F84E0 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		5959ED918D90BB8663F05A6C /* Pods-TripcolicIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripcolicIOS.debug.xcconfig"; path = "Target Support Files/Pods-TripcolicIOS/Pods-TripcolicIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		68EB616328B2AF0D29D38F3A /* Pods_TripcolicIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripcolicIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +91,7 @@
 				3342EC65299CFE9D00F36131 /* MapViewController.swift */,
 				339FAF9829D59D1900BDAE59 /* PopUpMapViewController.swift */,
 				3361E71B29D859CC008E17B4 /* PlacesTabelViewController.swift */,
+				33C24BA32A150DA6002CA459 /* PlaceDetailViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				333ED80829E82AAD00826B52 /* CLLocation+Extensions.swift */,
+				33C24BA52A152E55002CA459 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -361,6 +367,8 @@
 				33AC4FB2297AC64C00F61B4D /* FirebaseManager.swift in Sources */,
 				335C6140296594900032BF71 /* SceneDelegate.swift in Sources */,
 				3342EC64299CFE2F00F36131 /* FeedViewController.swift in Sources */,
+				33C24BA42A150DA6002CA459 /* PlaceDetailViewController.swift in Sources */,
+				33C24BA62A152E55002CA459 /* String+Extensions.swift in Sources */,
 				335C615B2965BCEF0032BF71 /* RegisterViewController.swift in Sources */,
 				3342EC68299CFEDD00F36131 /* ProfileViewController.swift in Sources */,
 				3342EC66299CFE9D00F36131 /* MapViewController.swift in Sources */,

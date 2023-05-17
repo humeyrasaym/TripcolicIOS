@@ -17,6 +17,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
+    private var places: [PlaceAnnotation] = []
     lazy var searchTextField : UITextField = {
         let searchTextField = UITextField()
         searchTextField.delegate = self
@@ -73,8 +74,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
-        let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
-        let region = MKCoordinateRegion(center: location, span: span)
+        let span = MKCoordinateSpan(latitudeDelta: 0.8, longitudeDelta: 0.8)
+        let region = MKCoordinateRegion(center: location, latitudinalMeters: 700, longitudinalMeters: 700)
         mapView.setRegion(region, animated: true)
     }
     
@@ -103,11 +104,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let search = MKLocalSearch(request: request)
         search.start { [weak self] response, error in
             guard let response = response, error == nil else {return}
-            let places = response.mapItems.map(PlaceAnnotation.init)
-            places.forEach { place in
+            self?.places = response.mapItems.map(PlaceAnnotation.init)
+            self?.places.forEach { place in
                 self?.mapView.addAnnotation(place)
             }
-            self?.presentPlacesSheet(places: places)
+            
+            if let places = self?.places{
+                self?.presentPlacesSheet(places: places)
+                
+            }
             //print(response.mapItems)
             
         }
@@ -124,6 +129,25 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             findNearbyPlaces(by: searchText)
         }
         return true
+    }
+    
+    private func clearAllSelections(){
+        self.places = self.places.map { place in
+            place.isSelected = false
+            return place
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
+        
+        clearAllSelections()
+        
+        guard let selectionAnnotation = annotation as? PlaceAnnotation else {return}
+        let placeAnnotation = self.places.first(where: {$0.id == selectionAnnotation.id })
+        placeAnnotation?.isSelected = true
+        
+        presentPlacesSheet(places: self.places)
+        
     }
     
     private func goTapped(_ sender: Any) {
