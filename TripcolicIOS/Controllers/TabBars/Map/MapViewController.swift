@@ -13,9 +13,10 @@ import Popover
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITextFieldDelegate{
     
     //MARK: variables
+    //@IBOutlet weak var leftBottomButton: UIButton!
 
     @IBOutlet weak var mapView: MKMapView!
-    var locationManager: CLLocationManager?
+    var locationManager = CLLocationManager()
     lazy var searchTextField : UITextField = {
         let searchTextField = UITextField()
         searchTextField.delegate = self
@@ -36,11 +37,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
         mapView.delegate = self
         
-        locationManager?.delegate = self
-        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager?.requestWhenInUseAuthorization()
-        locationManager?.requestAlwaysAuthorization()
-        locationManager?.startUpdatingLocation()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        //locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
         
         let gestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(chooseLocation(gestureRecognizer:)))
         gestureRecognizer.minimumPressDuration = 3
@@ -72,17 +73,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
-        let span = MKCoordinateSpan(latitudeDelta: 10.0, longitudeDelta: 10.0)
+        let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
         let region = MKCoordinateRegion(center: location, span: span)
         mapView.setRegion(region, animated: true)
     }
     
     private func presentPlacesSheet(places: [PlaceAnnotation]){
         
-        guard let locationManager = locationManager,
-              let userLocation = locationManager.location else {return}
-            let placesTVC = PlacesTableViewController(userLocation: userLocation, places: places)
-            placesTVC.modalPresentationStyle = .pageSheet
+        let locationManager = locationManager
+        guard let userLocation = locationManager.location else {return}
+        
+        let placesTVC = PlacesTableViewController(userLocation: userLocation, places: places)
+        placesTVC.modalPresentationStyle = .pageSheet
             
             if let sheet = placesTVC.sheetPresentationController{
                 sheet.prefersGrabberVisible = true
@@ -99,14 +101,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         request.region = mapView.region
         
         let search = MKLocalSearch(request: request)
-        search.start { response, error in
+        search.start { [weak self] response, error in
             guard let response = response, error == nil else {return}
             let places = response.mapItems.map(PlaceAnnotation.init)
             places.forEach { place in
-                self.mapView.addAnnotation(place)
+                self?.mapView.addAnnotation(place)
             }
-            self.presentPlacesSheet(places: places)
-            print(places)
+            self?.presentPlacesSheet(places: places)
+            //print(response.mapItems)
             
         }
         
@@ -126,10 +128,28 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     private func goTapped(_ sender: Any) {
         
+        /*let width = self.view.frame.width / 4
+        let aView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: width))
+        let options = [
+          .type(.up),
+          .cornerRadius(width / 2),
+          .animationIn(0.3),
+          .blackOverlayColor(UIColor.red),
+          .arrowSize(CGSize.zero)
+          ] as [PopoverOption]
+        let popover = Popover(options: options, showHandler: nil, dismissHandler: nil)
+        popover.show(aView, fromView: self.leftBottomButton)8*/
+        
+        //popover
+        
         let startPoint = CGPoint(x: self.view.frame.width - 60, y: 55)
         let aView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 180))
         let popover = Popover()
         popover.show(aView, point: startPoint)
+        
+        
+        
+        
             /*let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpVC") as! PopUpMapViewController
             self.addChild(popUpVC)
             popUpVC.view.frame = self.view.frame

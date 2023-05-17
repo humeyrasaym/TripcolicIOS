@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import MapKit
 
-class PlacesTableViewController: UITableViewController{
+class PlacesTableViewController: UITableViewController {
     
     var userLocation: CLLocation
     let places: [PlaceAnnotation]
@@ -19,7 +19,7 @@ class PlacesTableViewController: UITableViewController{
         self.places = places
         super.init(nibName: nil, bundle: nil)
         
-        tableView.register(UITableView.self, forCellReuseIdentifier: "PlaceCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "PlaceCell")
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

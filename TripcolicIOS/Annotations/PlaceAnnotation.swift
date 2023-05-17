@@ -21,11 +21,11 @@ class PlaceAnnotation: MKPointAnnotation {
     }
     
     var name: String{
-        mapItem.name ?? ""
+        self.mapItem.name ?? ""
     }
     
     var phone: String{
-        mapItem.phoneNumber ?? ""
+        self.mapItem.phoneNumber ?? ""
     }
     
     var address: String{
@@ -33,10 +33,10 @@ class PlaceAnnotation: MKPointAnnotation {
         "\(mapItem.placemark.subThoroughfare ?? "")\(mapItem.placemark.thoroughfare ?? "")\(mapItem.placemark.locality ?? "")\(mapItem.placemark.countryCode ?? "")"
     }
     
-    /*var location: CLLocation{
-        mapItem.placemark.location ?? CLLocation.default
+    var location: CLLocation{
+        mapItem.placemark.location ?? CLLocation.init()
         
         
-    }*/
+    }
     
 }
