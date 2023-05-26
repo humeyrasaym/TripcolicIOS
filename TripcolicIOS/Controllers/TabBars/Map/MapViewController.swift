@@ -16,6 +16,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     //@IBOutlet weak var leftBottomButton: UIButton!
 
     @IBOutlet weak var mapView: MKMapView!
+    //@IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
     private var places: [PlaceAnnotation] = []
     lazy var searchTextField : UITextField = {

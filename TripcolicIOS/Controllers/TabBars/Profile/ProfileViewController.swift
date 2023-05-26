@@ -20,13 +20,15 @@ class ProfileViewController: UIViewController {
 
    // MARK: IBFunctions
     
+    
     @IBAction func logoutButtonClicked(_ sender: Any) {
+        
         do{
             try Auth.auth().signOut()
             self.performSegue(withIdentifier: "logoutToSignIn", sender: nil)
         }catch{
             print("Error!")
-        }
+                }
         
         
         
