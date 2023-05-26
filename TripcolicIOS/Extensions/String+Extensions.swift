@@ -9,6 +9,12 @@ import Foundation
 
 extension String {
     
+    func safeDatabaseKey() -> String{
+        
+        return self.replacingOccurrences(of: "@", with: "-").self.replacingOccurrences(of: ".", with: "-")
+
+    }
+    
     var formatPhoneForCall: String{
         
         self.replacingOccurrences(of: " ", with: "")

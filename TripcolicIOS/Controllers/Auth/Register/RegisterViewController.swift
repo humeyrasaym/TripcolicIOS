@@ -7,7 +7,8 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth 
+import FirebaseAuth
+import SafariServices
 
 class RegisterViewController: UIViewController {
     
@@ -16,10 +17,30 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
+    private let termsButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Terms of Service", for: .normal)
+        button.setTitleColor(.secondaryLabel, for: .normal)
+        return button
+    }()
+    private let privacyButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Privacy Policy", for: .normal)
+        button.setTitleColor(.secondaryLabel, for: .normal)
+        return button
+    }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        termsButton.addTarget(self, action: #selector(didTapTermsButton), for: .touchUpInside)
+        privacyButton.addTarget(self, action: #selector(didTapPrivacyButton), for: .touchUpInside)
+        
+        view.addSubview(termsButton)
+        view.addSubview(privacyButton)
+
+        
         customizeTextFields()
         
         
@@ -56,13 +77,64 @@ class RegisterViewController: UIViewController {
         emailText.layer.borderWidth = 2
         emailText.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         emailText.leftViewMode = .always
+        
+        termsButton.frame = CGRect(x: 75,
+                                   y: view.height-view.safeAreaInsets.bottom-100,
+                                   width:view.width-20,
+                                   height: 50)
+        
+        privacyButton.frame = CGRect(x: -75,
+                                   y: view.height-view.safeAreaInsets.bottom-100,
+                                   width:view.width-20,
+                                   height: 50)
+    
+    }
+    
+    
+    
+    @objc private func didTapTermsButton(){
+        guard let url = URL(string: "https://help.instagram.com/581066165581870?__coig_restricted=1") else{return}
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true)
+        
+    }
+    
+    @objc private func didTapPrivacyButton(){
+        guard let url = URL(string: "https://privacycenter.instagram.com/policy") else{return}
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true)
+        
     }
     
     //MARK: - IBActions
     
     @IBAction func registerButton(_ sender: Any) {
         
-        if emailText.text != "" && passwordText.text != "" {
+        emailText.resignFirstResponder()
+        usernameText.resignFirstResponder()
+        passwordText.resignFirstResponder()
+        
+        guard let email = emailText.text, !email.isEmpty,
+              let username = usernameText.text, !username.isEmpty,
+              let password = passwordText.text, !password.isEmpty else{return}
+        
+        
+        AuthManager.shared.registerNewUser(username: username, email: email, password: password){ registered in
+            DispatchQueue.main.async{
+                if registered{
+                    
+                    self.performSegue(withIdentifier: "registerToFeed", sender: nil)
+                    
+                }
+                else {
+                    
+                }
+            }
+            
+        }
+    
+        
+        /*if emailText.text != "" && passwordText.text != "" {
                         
             Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!){(authdata, error) in
                 
@@ -76,10 +148,10 @@ class RegisterViewController: UIViewController {
         else{
             makeAlert(titleInput: "Error", messageInput: "Email/Password needed")
             
-        }
+        }*/
     }
     
-    
+    //MARK: -Segue
     @IBAction func signInButtonClicked(_ sender: Any) {
         performSegue(withIdentifier: "toSignIn", sender: nil)
     }

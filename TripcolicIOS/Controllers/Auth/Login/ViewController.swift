@@ -49,10 +49,45 @@ class ViewController: UIViewController{
         usernameText.leftViewMode = .always
     }
     
+    
+    
     // MARK: - IBActions
 
     @IBAction func signInButton(_ sender: Any) {
-        if usernameText.text! != "" && passwordText.text! != ""{
+        
+        passwordText.resignFirstResponder()
+        usernameText.resignFirstResponder()
+        
+        guard let usernameEmail = usernameText.text, !usernameEmail.isEmpty,
+              let password = passwordText.text, !password.isEmpty, password.count>=6 else {return}
+        
+        var username:String?
+        var email:String?
+        
+        if usernameEmail.contains("@"), usernameEmail.contains("."){
+            email = usernameEmail
+        } else {
+            username = usernameEmail
+        }
+        
+        AuthManager.shared.loginUser(username: username, email: email, password: password){success in
+            DispatchQueue.main.async{
+                if success {
+                    //user loged in
+                    self.performSegue(withIdentifier: "signInToFeed", sender: nil)
+                    //self.dismiss(animated: true, completion: nil)
+                } else {
+                    //error
+                    self.makeAlert(titleInput: "Error", messageInput: "We couldn't log you in")
+                    
+                }
+            }
+        }
+        
+        
+        
+        
+        /*if usernameText.text! != "" && passwordText.text! != ""{
             Auth.auth().signIn(withEmail: usernameText.text!, password: passwordText.text!){(authdata, error) in
                 if error != nil{
                     self.makeAlert(titleInput: "Error!", messageInput: error?.localizedDescription ?? "Error!")
@@ -65,7 +100,7 @@ class ViewController: UIViewController{
         else{
             makeAlert(titleInput: "Error", messageInput: "Email/Password needed")
             
-        }
+        }*/
     }
     
     @IBAction func recoveryPasswordButton(_ sender: Any) {
