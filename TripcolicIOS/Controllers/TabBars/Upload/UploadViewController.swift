@@ -12,10 +12,7 @@ import UIKit
 class UploadViewController: UIViewController{
     
        
-    //@IBOutlet weak var imageLibrary: UIImageView!
     @IBOutlet weak var imageLibrary: UIImageView!
-    //@IBOutlet weak var commentText: UITextField!
-    
     @IBOutlet weak var commentText: UITextField!
     
     override func viewDidLoad() {
@@ -31,8 +28,7 @@ class UploadViewController: UIViewController{
         commentText.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         commentText.leftViewMode = .always
     }
-    /*@IBAction func uploadButtonClicked(_ sender: Any) {
-    }*/
+    
     
     @IBAction func uploadButtonClicked(_ sender: Any) {
     }

@@ -15,12 +15,15 @@ class ViewController: UIViewController{
 
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var usernameText: UITextField!
-    @IBOutlet weak var rememberMe: UIButton!
+    @IBOutlet weak var rememberMe: UIButton?
+    @IBOutlet var forgotPassword: UIButton!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        customizeTextFields()
-    }
+        customizeTextFields()    }
     
     
     // MARK: - functions
@@ -34,18 +37,20 @@ class ViewController: UIViewController{
     }
     
     private func customizeTextFields(){
+        
+        
         passwordText.layer.cornerRadius = 18
         passwordText.layer.masksToBounds = true
         passwordText.layer.borderColor = UIColor.gray.cgColor
         passwordText.layer.borderWidth = 2
-        passwordText.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+        passwordText.leftView = UIView(frame: CGRect(x: 0, y: 0,                                                                         width: 10, height: 0))
         passwordText.leftViewMode = .always
         
         usernameText.layer.cornerRadius = 18
         usernameText.layer.masksToBounds = true
         usernameText.layer.borderColor = UIColor.gray.cgColor
         usernameText.layer.borderWidth = 2
-        usernameText.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+        usernameText.leftView = UIView(frame: CGRect(x: 0, y: 0,                                                                         width: 10, height: 0))
         usernameText.leftViewMode = .always
     }
     
@@ -107,8 +112,10 @@ class ViewController: UIViewController{
     }
     
     @IBAction func rememberMeButton(_ sender: Any) {
-        rememberMe.isSelected.toggle()
+        //rememberMe.isEnabled.toggle()
     }
+    
+    
     @IBAction func registerButton(_ sender: Any) {
         // MARK: - Manual Push
         // let storyboard = UIStoryboard(name: "Main", bundle: nil)

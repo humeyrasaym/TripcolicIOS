@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3b0-Fg-I8A">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -20,7 +20,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="TRIPCOLIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P81-8F-YNd">
                                 <rect key="frame" x="51" y="101" width="288" height="30.333333333333343"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="39"/>
-                                <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
+                                <color key="textColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFc-Ns-SOd">
@@ -80,6 +80,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password ?" titleAlignment="leading">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                    <color key="baseForegroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="recoveryPasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vcl-cg-XBG"/>
@@ -94,7 +95,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system"/>
                                 <connections>
-                                    <action selector="rememberMeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TTX-dH-UYi"/>
+                                    <action selector="rememberMeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hd-cP-OXk"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOr-AE-bna">
@@ -157,9 +158,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="5yL-8q-dPi"/>
                     <connections>
-                        <outlet property="passwordText" destination="MGx-oI-1I3" id="gB4-ku-hLA"/>
-                        <outlet property="rememberMe" destination="eUV-mg-gRz" id="hY5-Ck-Rl8"/>
-                        <outlet property="usernameText" destination="6Tq-Nr-vVm" id="jBd-XG-IIc"/>
+                        <outlet property="forgotPassword" destination="8bC-Xf-vdC" id="Be8-5D-Uwu"/>
+                        <outlet property="passwordText" destination="MGx-oI-1I3" id="N3C-Y1-rat"/>
+                        <outlet property="rememberMe" destination="eUV-mg-gRz" id="kfF-oX-Ynl"/>
+                        <outlet property="usernameText" destination="6Tq-Nr-vVm" id="hiR-9l-rY2"/>
                         <segue destination="jGo-T1-Yb2" kind="presentation" identifier="presentRegisterSegue" modalPresentationStyle="fullScreen" id="UQY-on-VNa"/>
                         <segue destination="npn-1u-be9" kind="presentation" identifier="signInToFeed" modalPresentationStyle="fullScreen" id="arm-wh-D9f"/>
                     </connections>
@@ -329,11 +331,11 @@
             </objects>
             <point key="canvasLocation" x="3922" y="-63"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="bIc-Ic-rja">
             <objects>
                 <navigationController id="6vK-6o-vQW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="map" catalog="system" id="Fie-mR-WKM"/>
+                    <tabBarItem key="tabBarItem" title="" image="map" catalog="system" id="Fie-mR-WKM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="whw-i6-syO">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -362,13 +364,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ojj-Ak-5Nf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="254" y="-63"/>
+            <point key="canvasLocation" x="235" y="-63"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="G53-YX-JTa">
             <objects>
                 <navigationController id="v92-WL-uHr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="person" catalog="system" id="amL-1s-98N"/>
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="amL-1s-98N"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jdx-2S-PIf">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -381,11 +383,11 @@
             </objects>
             <point key="canvasLocation" x="5305" y="670"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="fnV-uX-so4">
             <objects>
                 <navigationController id="9r6-aw-Czh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="heart" catalog="system" id="mQG-MB-PBj"/>
+                    <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="mQG-MB-PBj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3tW-FD-pvz">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -398,11 +400,11 @@
             </objects>
             <point key="canvasLocation" x="4611" y="670"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="m5u-Z0-Lep">
             <objects>
                 <navigationController id="KAW-am-aJN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="plus" catalog="system" id="EbR-Ek-18v"/>
+                    <tabBarItem key="tabBarItem" title="" image="plus" catalog="system" id="EbR-Ek-18v"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xy7-5r-WOK">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -415,11 +417,11 @@
             </objects>
             <point key="canvasLocation" x="3922" y="670"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Hzh-X6-xda">
             <objects>
                 <navigationController id="TtP-4S-c92" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="house" catalog="system" id="itC-1D-dbM"/>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="itC-1D-dbM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="C52-nN-fSY">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -543,18 +545,6 @@
                     <view key="view" contentMode="scaleToFill" id="7eo-KD-sv5">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qef-w8-BA9">
-                                <rect key="frame" x="106" y="401" width="178" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="LogOut"/>
-                                <connections>
-                                    <action selector="logoutButtonClicked:" destination="JKJ-26-clb" eventType="touchUpInside" id="JEa-yD-7ie"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutToSignIn" modalPresentationStyle="fullScreen" id="2ua-an-bg9"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="QiK-vX-iAM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>

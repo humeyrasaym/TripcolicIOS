@@ -20,6 +20,8 @@
 		335C61522965A70F0032BF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 335C61512965A70F0032BF71 /* Assets.xcassets */; };
 		335C615B2965BCEF0032BF71 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C615A2965BCEF0032BF71 /* RegisterViewController.swift */; };
 		3361E71C29D859CC008E17B4 /* PlacesTabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3361E71B29D859CC008E17B4 /* PlacesTabelViewController.swift */; };
+		3374E43E2A20B6280048DD11 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374E43D2A20B6280048DD11 /* SettingsViewController.swift */; };
+		3374E4412A2137580048DD11 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374E4402A2137580048DD11 /* NotificationViewController.swift */; };
 		339FAF9929D59D1900BDAE59 /* PopUpMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339FAF9829D59D1900BDAE59 /* PopUpMapViewController.swift */; };
 		33AC4FB2297AC64C00F61B4D /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AC4FB1297AC64C00F61B4D /* DatabaseManager.swift */; };
 		33AC4FB4297D3B1700F61B4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33AC4FB3297D3B1700F61B4D /* GoogleService-Info.plist */; };
@@ -48,6 +50,8 @@
 		335C61512965A70F0032BF71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		335C615A2965BCEF0032BF71 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3361E71B29D859CC008E17B4 /* PlacesTabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTabelViewController.swift; sourceTree = "<group>"; };
+		3374E43D2A20B6280048DD11 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3374E4402A2137580048DD11 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		339FAF9829D59D1900BDAE59 /* PopUpMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpMapViewController.swift; sourceTree = "<group>"; };
 		33AC4FB1297AC64C00F61B4D /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		33AC4FB3297D3B1700F61B4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 		330A02A129B644B100E4F9D4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				3374E43D2A20B6280048DD11 /* SettingsViewController.swift */,
 				3342EC67299CFEDD00F36131 /* ProfileViewController.swift */,
 			);
 			path = Profile;
@@ -123,6 +128,7 @@
 		3342EC69299CFEF000F36131 /* TabBars */ = {
 			isa = PBXGroup;
 			children = (
+				3374E43F2A21373C0048DD11 /* Notifications */,
 				334DF8672A0904E000A089B9 /* Upload */,
 				330A02A129B644B100E4F9D4 /* Profile */,
 				330A02A029B644A700E4F9D4 /* Map */,
@@ -224,6 +230,14 @@
 				33C24BAD2A169E08002CA459 /* AuthManager.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		3374E43F2A21373C0048DD11 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				3374E4402A2137580048DD11 /* NotificationViewController.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		33AC4FB0297AC63A00F61B4D /* Utilities */ = {
@@ -372,10 +386,12 @@
 				335C6142296594900032BF71 /* ViewController.swift in Sources */,
 				333ED80929E82AAD00826B52 /* CLLocation+Extensions.swift in Sources */,
 				335C613E296594900032BF71 /* AppDelegate.swift in Sources */,
+				3374E43E2A20B6280048DD11 /* SettingsViewController.swift in Sources */,
 				33D8471729D83903008F84E0 /* PlaceAnnotation.swift in Sources */,
 				3361E71C29D859CC008E17B4 /* PlacesTabelViewController.swift in Sources */,
 				33C24BAC2A169603002CA459 /* UIView+Extensions.swift in Sources */,
 				33AC4FB2297AC64C00F61B4D /* DatabaseManager.swift in Sources */,
+				3374E4412A2137580048DD11 /* NotificationViewController.swift in Sources */,
 				335C6140296594900032BF71 /* SceneDelegate.swift in Sources */,
 				3342EC64299CFE2F00F36131 /* FeedViewController.swift in Sources */,
 				33C24BA42A150DA6002CA459 /* PlaceDetailViewController.swift in Sources */,
