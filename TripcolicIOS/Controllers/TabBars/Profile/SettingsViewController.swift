@@ -5,7 +5,7 @@
 //  Created by Hümeyra SAYIM on 5/26/23.
 //
 
-import Foundation
+import SafariServices
 import UIKit
 
 struct SettingCellModel{
@@ -39,11 +39,38 @@ final class SettingsViewController: UIViewController{
     }
     
     private func configureModels(){
-        let section = [
+        
+        data.append([
+            SettingCellModel(title: "Edit Profile") {[weak self] in
+                self?.didTapEditProfile()
+            },
+            SettingCellModel(title: "Invite Friends") {[weak self] in
+                self?.didTapInviteFriends()
+            }
+        ])
+        
+        data.append([
+            SettingCellModel(title: "Terms of Service") {[weak self] in
+                self?.openURL(type: .terms)
+            },
+        
+            SettingCellModel(title: "Privacy Policy") {[weak self] in
+                self?.openURL(type: .privacy)
+            },
+        
+            SettingCellModel(title: "Help / Feedback") {[weak self] in
+                self?.openURL(type: .help)
+            }
+        ])
+        
+        data.append([
             SettingCellModel(title: "Log Out") {[weak self] in
                 self?.didTapLogOut()
-            }]
-        data.append(section)
+            }])
+    }
+    
+    enum SettingsUrlType {
+        case terms, privacy, help
     }
     
     private func didTapLogOut(){
@@ -61,13 +88,19 @@ final class SettingsViewController: UIViewController{
                 DispatchQueue.main.async {
                     
                     if success {
-                        
-                        let loginVC = ViewController()
+                        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let viewController = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
+                        viewController.modalPresentationStyle = .fullScreen
+                        self.present(viewController, animated: true){
+                            self.navigationController?.popToRootViewController(animated: false)
+                            self.tabBarController?.selectedIndex = 0
+                        } 
+                        /*let loginVC = ViewController()
                         loginVC.modalPresentationStyle = .fullScreen
                         self.present(loginVC, animated: true){
                             self.navigationController?.popToRootViewController(animated: false)
                             self.tabBarController?.selectedIndex = 0
-                        }
+                        }*/
                         
                     } else {
                         fatalError("Could not log you out!")
@@ -85,11 +118,41 @@ final class SettingsViewController: UIViewController{
         
             
         }
+    private func didTapEditProfile(){
+        
+        let vc = EditProfileViewController()
+        vc.title = "Edit Profile"
+        let navVC = UINavigationController(rootViewController: vc)
+        navVC.modalPresentationStyle = .fullScreen
+        present(navVC, animated: true)
+        
+    }
+    
+    private func didTapInviteFriends(){
+        
+    }
+    
+    private func openURL(type: SettingsUrlType){
+        let urlString: String
+        
+        switch type {
+        case .terms: urlString = "https://help.instagram.com/581066165581870"
+        case .privacy: urlString = "https://help.instagram.com/155833707900388"
+        case .help: urlString = "https://help.instagram.com/"
+        }
+        
+        guard let url = URL(string: urlString) else {return}
+        
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true)
+        
+    }
+    
+    
+    
         
     }
 
-    
-    
     
     
     extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -107,6 +170,7 @@ final class SettingsViewController: UIViewController{
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             cell.textLabel?.text = data[indexPath.section][indexPath.row].title
+            cell.accessoryType = .disclosureIndicator
             return cell
         }
         

@@ -20,10 +20,18 @@ class ViewController: UIViewController{
     
     
     
+    /*deinit {
+        print("deinit View Controller")
+    }*/
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        customizeTextFields()    }
+        customizeTextFields()
+    }
+    
+   
     
     
     // MARK: - functions

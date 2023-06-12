@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TripcolicIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="TripcolicIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -522,10 +522,10 @@
             </objects>
             <point key="canvasLocation" x="3922" y="1356"/>
         </scene>
-        <!--Notification View Controller-->
+        <!--Notifications View Controller-->
         <scene sceneID="hE2-ye-wSi">
             <objects>
-                <viewController id="aUL-Rk-MCq" customClass="NotificationViewController" sceneMemberID="viewController">
+                <viewController id="aUL-Rk-MCq" customClass="NotificationsViewController" customModule="TripcolicIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PT4-q1-IzW">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

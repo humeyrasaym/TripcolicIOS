@@ -5,7 +5,7 @@
 //  Created by Hümeyra SAYIM on 5/8/23.
 //
 
-import Foundation
+import AVFoundation
 import UIKit
 
 
@@ -17,7 +17,14 @@ class UploadViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
         customizeTextFields()
+    }
+    
+    private func didTapTakePicture(){
+        
     }
     
     private func customizeTextFields(){
