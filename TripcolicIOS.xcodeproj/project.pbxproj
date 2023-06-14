@@ -29,12 +29,12 @@
 		335C615B2965BCEF0032BF71 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C615A2965BCEF0032BF71 /* RegisterViewController.swift */; };
 		3361E71C29D859CC008E17B4 /* PlacesTabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3361E71B29D859CC008E17B4 /* PlacesTabelViewController.swift */; };
 		3374E43E2A20B6280048DD11 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374E43D2A20B6280048DD11 /* SettingsViewController.swift */; };
-		3374E4412A2137580048DD11 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374E4402A2137580048DD11 /* NotificationViewController.swift */; };
 		3374E4442A2140510048DD11 /* IGFeedPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374E4432A2140510048DD11 /* IGFeedPostTableViewCell.swift */; };
 		3374E4462A222DF30048DD11 /* IGFeedPostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374E4452A222DF30048DD11 /* IGFeedPostHeaderTableViewCell.swift */; };
 		3374E4482A222EA60048DD11 /* IGFeedPostActionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374E4472A222EA60048DD11 /* IGFeedPostActionsTableViewCell.swift */; };
 		3374E44B2A222F1C0048DD11 /* IGFeedPostGeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374E44A2A222F1C0048DD11 /* IGFeedPostGeneralTableViewCell.swift */; };
 		3374E44D2A2290520048DD11 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374E44C2A2290520048DD11 /* EditProfileViewController.swift */; };
+		338713A72A378FEB004A6902 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338713A62A378FEB004A6902 /* NotificationsViewController.swift */; };
 		339875C12A2E595900FD5EE5 /* NotificationFollowEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339875C02A2E595900FD5EE5 /* NotificationFollowEventTableViewCell.swift */; };
 		339875C32A2E597700FD5EE5 /* NotificationLikeEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339875C22A2E597700FD5EE5 /* NotificationLikeEventTableViewCell.swift */; };
 		339FAF9929D59D1900BDAE59 /* PopUpMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339FAF9829D59D1900BDAE59 /* PopUpMapViewController.swift */; };
@@ -75,12 +75,12 @@
 		335C615A2965BCEF0032BF71 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3361E71B29D859CC008E17B4 /* PlacesTabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTabelViewController.swift; sourceTree = "<group>"; };
 		3374E43D2A20B6280048DD11 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		3374E4402A2137580048DD11 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		3374E4432A2140510048DD11 /* IGFeedPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostTableViewCell.swift; sourceTree = "<group>"; };
 		3374E4452A222DF30048DD11 /* IGFeedPostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		3374E4472A222EA60048DD11 /* IGFeedPostActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostActionsTableViewCell.swift; sourceTree = "<group>"; };
 		3374E44A2A222F1C0048DD11 /* IGFeedPostGeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostGeneralTableViewCell.swift; sourceTree = "<group>"; };
 		3374E44C2A2290520048DD11 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		338713A62A378FEB004A6902 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		339875C02A2E595900FD5EE5 /* NotificationFollowEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFollowEventTableViewCell.swift; sourceTree = "<group>"; };
 		339875C22A2E597700FD5EE5 /* NotificationLikeEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationLikeEventTableViewCell.swift; sourceTree = "<group>"; };
 		339FAF9829D59D1900BDAE59 /* PopUpMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpMapViewController.swift; sourceTree = "<group>"; };
@@ -299,8 +299,8 @@
 		3374E43F2A21373C0048DD11 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
-				3374E4402A2137580048DD11 /* NotificationViewController.swift */,
 				33A9EDD52A2E48E500CB88A2 /* NoNotificationsView.swift */,
+				338713A62A378FEB004A6902 /* NotificationsViewController.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -499,11 +499,11 @@
 				33AC4FB2297AC64C00F61B4D /* DatabaseManager.swift in Sources */,
 				3341F7542A290646000481F2 /* UserFollowTableViewCell.swift in Sources */,
 				3343F8912A27EFBA00E6ABE8 /* PhotoCollectionViewCell.swift in Sources */,
-				3374E4412A2137580048DD11 /* NotificationViewController.swift in Sources */,
 				335C6140296594900032BF71 /* SceneDelegate.swift in Sources */,
 				3342EC64299CFE2F00F36131 /* FeedViewController.swift in Sources */,
 				33C24BA42A150DA6002CA459 /* PlaceDetailViewController.swift in Sources */,
 				33C24BA62A152E55002CA459 /* String+Extensions.swift in Sources */,
+				338713A72A378FEB004A6902 /* NotificationsViewController.swift in Sources */,
 				3343F8932A27F02E00E6ABE8 /* ProfileInfoHeaderCollectionReusableView.swift in Sources */,
 				33A9EDD62A2E48E500CB88A2 /* NoNotificationsView.swift in Sources */,
 				3374E4442A2140510048DD11 /* IGFeedPostTableViewCell.swift in Sources */,

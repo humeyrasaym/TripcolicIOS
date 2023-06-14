@@ -40,6 +40,7 @@ import SDWebImage
         private let postButton: UIButton = {
             let button = UIButton()
             button.setBackgroundImage(UIImage(named: "test"), for: .normal)
+            
             return button
         }()
         
@@ -49,14 +50,14 @@ import SDWebImage
             contentView.addSubview(profileImageView)
             contentView.addSubview(label)
             contentView.addSubview(postButton)
-            postButton.addTarget(self, action: #selector(didTapPostsButton), for: .touchUpInside)
+            postButton.addTarget(self, action: #selector(didTapPostButton), for: .touchUpInside)
             
             selectionStyle = .none
 
 
         }
         
-        @objc private func didTapPostsButton(){
+        @objc private func didTapPostButton(){
             guard let model = model else {return}
             delegate?.didTapRelatedPostButton(model: model)
         }

@@ -74,15 +74,16 @@ class NotificationFollowEventTableViewCell: UITableViewCell {
         case .follow(let state):
             // configure button
             switch state {
-            case .not_following:
-                // show unfollow button
-                configureForFollow()
             case .following:
+                followButton.setTitle("Unfollow", for: .normal)
+                followButton.setTitleColor(.label, for: .normal)
+                followButton.layer.borderWidth = 1
+                followButton.layer.borderColor = UIColor.secondaryLabel.cgColor
+            case .not_following:
                 followButton.setTitle("Follow", for: .normal)
                 followButton.setTitleColor(.white, for: .normal)
                 followButton.layer.borderWidth = 0
                 followButton.backgroundColor = .link
-                
             }
             break
         }
